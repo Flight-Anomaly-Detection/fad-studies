@@ -46,12 +46,12 @@ library(dplyr)
 
 # Introduction
 
-This report describes the inital findings of the exploratory data analysis conducted for building the foundation of the anomaly detection algorithm to be developed. Is is divided in the following sections:
+This report describes the initial findings of the exploratory data analysis conducted for building the foundation of the anomaly detection algorithm to be developed. It is divided in the following sections:
 
 * **Flight data**: brief description of the flight data collection used;
 * **Preliminary data visualization**: introductory charts for flight data familiarization;
 * **Benchmark**: presentation of the results obtained with PyMKAD;
-* **Landing drill down**: discussion focused on the landing fase;
+* **Landing drill down**: discussion focused on the landing phase;
 * **Anomalies**: introductory discussion of the potential anomalies found in the data (quantitatively and qualitatively);
 * **Clustering**: initial findings of the application of clustering algorithms.
 
@@ -61,7 +61,7 @@ The underlying code for analyzing the flight data and plotting charts can be fou
 
 # Flight data
 
-For this prelimnary analysis, the flight data used was the one publicly available with the Multiple Kernel Anomaly Detection (MKAD) algorithm (https://ti.arc.nasa.gov/opensource/projects/mkad/). It is composed by 112 flights, available as *csv* files. Each flight contains observations for the following parameters:
+For this preliminary analysis, the flight data used was the one publicly available with the Multiple Kernel Anomaly Detection (MKAD) algorithm (https://ti.arc.nasa.gov/opensource/projects/mkad/). It is composed by 112 flights, available as *csv* files. Each flight contains observations for the following parameters:
 
 * Time;
 * Altitude;
@@ -82,7 +82,7 @@ For this prelimnary analysis, the flight data used was the one publicly availabl
 
 ## Flights heterogeneity
 
-The flights available clearly encompasses operations for different routes, given the diverse flight times and distances from touchdown presented on the charts in the *Preliminary data visualization* chapter. This raises a few questions:
+The flights available clearly encompass operations for different routes, given the diverse flight times and distances from touchdown presented on the charts in the *Preliminary data visualization* chapter. This raises a few questions:
 
 * Should anomaly detection be restricted to a set of flights that are supposed to be similar? In a sense that the algorithm must beware that those flights refer to the same operation (landing at a given airport, e.g.)
 * What are the disadvantages of restricting the sets of flights? One could lose track of a rare but potentially hazardous anomaly that happened in two different operations but with the same root cause. In order to avoid these scenarios, the methodology could contemplate the anomalies also being clustered amongst themselves.
@@ -192,7 +192,7 @@ knitr::include_graphics("figures/landing_anomalies_airspeed_bounded.png")
 
 ```
 
-Discuss clustering methodolgy and results. Improve visualization without color repetition.
+Discuss clustering methodology and results. Improve visualization without color repetition.
 
 
 \newpage

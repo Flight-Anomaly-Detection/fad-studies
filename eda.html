@@ -1733,12 +1733,12 @@ div.tocify {
 
 <div id="introduction" class="section level1">
 <h1><span class="header-section-number">1</span> Introduction</h1>
-<p>This report describes the inital findings of the exploratory data analysis conducted for building the foundation of the anomaly detection algorithm to be developed. Is is divided in the following sections:</p>
+<p>This report describes the initial findings of the exploratory data analysis conducted for building the foundation of the anomaly detection algorithm to be developed. It is divided in the following sections:</p>
 <ul>
 <li><strong>Flight data</strong>: brief description of the flight data collection used;</li>
 <li><strong>Preliminary data visualization</strong>: introductory charts for flight data familiarization;</li>
 <li><strong>Benchmark</strong>: presentation of the results obtained with PyMKAD;</li>
-<li><strong>Landing drill down</strong>: discussion focused on the landing fase;</li>
+<li><strong>Landing drill down</strong>: discussion focused on the landing phase;</li>
 <li><strong>Anomalies</strong>: introductory discussion of the potential anomalies found in the data (quantitatively and qualitatively);</li>
 <li><strong>Clustering</strong>: initial findings of the application of clustering algorithms.</li>
 </ul>
@@ -1747,7 +1747,7 @@ div.tocify {
 </div>
 <div id="flight-data" class="section level1">
 <h1><span class="header-section-number">2</span> Flight data</h1>
-<p>For this prelimnary analysis, the flight data used was the one publicly available with the Multiple Kernel Anomaly Detection (MKAD) algorithm (<a href="https://ti.arc.nasa.gov/opensource/projects/mkad/" class="uri">https://ti.arc.nasa.gov/opensource/projects/mkad/</a>). It is composed by 112 flights, available as <em>csv</em> files. Each flight contains observations for the following parameters:</p>
+<p>For this preliminary analysis, the flight data used was the one publicly available with the Multiple Kernel Anomaly Detection (MKAD) algorithm (<a href="https://ti.arc.nasa.gov/opensource/projects/mkad/" class="uri">https://ti.arc.nasa.gov/opensource/projects/mkad/</a>). It is composed by 112 flights, available as <em>csv</em> files. Each flight contains observations for the following parameters:</p>
 <ul>
 <li>Time;</li>
 <li>Altitude;</li>
@@ -1768,7 +1768,7 @@ div.tocify {
 </ul>
 <div id="flights-heterogeneity" class="section level2">
 <h2><span class="header-section-number">2.1</span> Flights heterogeneity</h2>
-<p>The flights available clearly encompasses operations for different routes, given the diverse flight times and distances from touchdown presented on the charts in the <em>Preliminary data visualization</em> chapter. This raises a few questions:</p>
+<p>The flights available clearly encompass operations for different routes, given the diverse flight times and distances from touchdown presented on the charts in the <em>Preliminary data visualization</em> chapter. This raises a few questions:</p>
 <ul>
 <li>Should anomaly detection be restricted to a set of flights that are supposed to be similar? In a sense that the algorithm must beware that those flights refer to the same operation (landing at a given airport, e.g.)</li>
 <li>What are the disadvantages of restricting the sets of flights? One could lose track of a rare but potentially hazardous anomaly that happened in two different operations but with the same root cause. In order to avoid these scenarios, the methodology could contemplate the anomalies also being clustered amongst themselves.</li>
@@ -2042,7 +2042,7 @@ Altitude vs distance from touchdown (landing), bounded
 Airspeed vs distance from touchdown (landing), bounded
 </p>
 </div>
-<p>Discuss clustering methodolgy and results. Improve visualization without color repetition.</p>
+<p>Discuss clustering methodology and results. Improve visualization without color repetition.</p>
 <div style="page-break-after: always;"></div>
 <div id="refs" class="references">
 <div id="ref-li_anomaly_2013">
