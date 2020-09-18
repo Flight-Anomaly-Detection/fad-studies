@@ -90,26 +90,46 @@ _ = plot_flights_n_boundary(df_flights,
                             xlims=(-2, 1),
                             xlabel='Distance from touchdown [NM]',
                             ylabel='Altitude [ft]',
-                            highlight_flights=anomalous_flights
+                            highlight_flights=anomalous_flights,
+                            include_legend=True,
+                            df_lower_boundary=quantile_10,
+                            df_upper_boundary=quantile_90,
+                            lower_boundary_label='10th percentile',
+                            upper_boundary_label='90th percentile'
                             )
 _ = plot_flights_n_boundary(df_flights,
                             'DistanceFromTouchdown', 'AirSpeed',
                             xlims=(-2, 1),
                             xlabel='Distance from touchdown [NM]',
                             ylabel='AirSpeed [m/s]',
-                            highlight_flights=anomalous_flights
+                            highlight_flights=anomalous_flights,
+                            include_legend=True,
+                            df_lower_boundary=quantile_10,
+                            df_upper_boundary=quantile_90,
+                            lower_boundary_label='10th percentile',
+                            upper_boundary_label='90th percentile'
                             )
 _ = plot_flights_n_boundary(df_flights,
                             'DistanceFromTouchdown', 'Landing_Gear',
                             xlims=(-2, 1),
                             xlabel='Distance from touchdown [NM]',
                             ylabel='Landing_Gear',
-                            highlight_flights=anomalous_flights
+                            highlight_flights=anomalous_flights,
+                            include_legend=True,
+                            df_lower_boundary=quantile_10,
+                            df_upper_boundary=quantile_90,
+                            lower_boundary_label='10th percentile',
+                            upper_boundary_label='90th percentile'
                             )
 _ = plot_flights_n_boundary(df_flights,
                             'DistanceFromTouchdown', 'Thrust_Rev',
                             xlims=(-2, 1),
                             xlabel='Distance from touchdown [NM]',
                             ylabel='Thrust_Rev',
-                            highlight_flights=anomalous_flights
+                            highlight_flights=anomalous_flights,
+                            include_legend=True,
+                            df_lower_boundary=quantile_10,
+                            df_upper_boundary=quantile_90,
+                            lower_boundary_label='10th percentile',
+                            upper_boundary_label='90th percentile'
                             )

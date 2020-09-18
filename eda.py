@@ -120,7 +120,9 @@ def plot_flights_n_boundary(df_flights, x_column, y_column,
                             lower_boundary_label=None,
                             upper_boundary_label=None,
                             highlight_flight=None,
-                            highlight_flights=None):
+                            highlight_flights=None,
+                            label_highlighted_flights=False,
+                            include_legend=True):
     """
     Plots pair of parameters for every flight within the compiled dataframe.
     """
@@ -148,7 +150,7 @@ def plot_flights_n_boundary(df_flights, x_column, y_column,
         ylims = sorted(ylims)
         df_flights = df_flights[
                 df_flights[y_column] >= ylims[0]][
-                        df_flights[y_column] <= xlims[1]
+                        df_flights[y_column] <= ylims[1]
                 ]
     if xlabel is None:
         xlabel = x_column
@@ -211,9 +213,10 @@ def plot_flights_n_boundary(df_flights, x_column, y_column,
                                    flight][y_column],
                         color='red',
                         linewidth=1.25,
-                        label=flight)
+                        label=flight if label_highlighted_flights else "_nolegend_")
 
-    ax.legend()
+    if include_legend:
+        ax.legend()
     ax.set_title(title)
     ax.set_ylabel(ylabel)
     ax.set_xlabel(xlabel)
